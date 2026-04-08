@@ -355,7 +355,7 @@ h6 {
   height: 100vh;
 /*  background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("../img/hero-bg.jpg") top center; */
 /*    background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("../img/nasa_space_weather.jpg") top center; */
-  background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("../img/solar_flare_x9_3.jpg") top center; 
+  background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("../img/solar_flare_x9_3_crop.jpg") top center; 
   background-size: cover;
   position: relative;
   margin-bottom: -90px;
