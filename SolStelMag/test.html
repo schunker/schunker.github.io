@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Physics at Newcastle | Research, Teaching & Students</title>
+  <meta content="Physics research, teaching and student opportunities at the University of Newcastle, Australia." name="description">
+  <meta content="University of Newcastle, Physics, astrophysics, solar physics, stellar physics, research, honours, HDR" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Existing site fonts/vendor framework -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --physics-navy: #071a2f;
+      --physics-blue: #0c4a6e;
+      --physics-cyan: #38bdf8;
+      --physics-red: #d71920;
+      --physics-light: #f5f7fa;
+      --physics-text: #263238;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { color: var(--physics-text); }
+
+    /* Department-specific visual layer over the existing template */
+    #header { transition: all .35s ease; }
+    #header.scrolled {
+      background: rgba(7, 26, 47, .97);
+      box-shadow: 0 3px 18px rgba(0,0,0,.18);
+    }
+
+    .logo h1 { margin: 0; line-height: 1; }
+    .logo h1 a { font-size: 22px; letter-spacing: .2px; }
+
+    #hero {
+      min-height: 88vh;
+      position: relative;
+      background:
+        linear-gradient(115deg, rgba(3,15,29,.93), rgba(3,25,46,.68)),
+        url("assets/img/hero-bg.jpg") center center / cover no-repeat;
+    }
+
+    #hero .hero-container {
+      max-width: 1100px;
+      text-align: left;
+      align-items: flex-start;
+      padding: 120px 30px 80px;
+    }
+
+    #hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.02;
+      margin-bottom: 25px;
+      max-width: 900px;
+    }
+
+    #hero h2 {
+      font-size: clamp(19px, 2.3vw, 29px);
+      line-height: 1.45;
+      max-width: 760px;
+      font-weight: 400;
+      margin-bottom: 35px;
+    }
+
+    .hero-kicker {
+      color: var(--physics-cyan);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-btn {
+      border: 1px solid rgba(255,255,255,.5);
+      color: #fff;
+      padding: 13px 22px;
+      border-radius: 3px;
+      font-weight: 600;
+      transition: .25s;
+    }
+    .hero-btn:hover { background: #fff; color: var(--physics-navy); }
+    .hero-btn.primary { background: var(--physics-red); border-color: var(--physics-red); }
+    .hero-btn.primary:hover { background: #b8141a; color: #fff; }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+    .section-intro p { font-size: 17px; line-height: 1.8; }
+
+    .research-card {
+      height: 100%;
+      padding: 34px 30px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 8px 35px rgba(7,26,47,.08);
+      border-top: 4px solid var(--physics-blue);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .research-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 45px rgba(7,26,47,.14);
+    }
+    .research-card .icon {
+      font-size: 36px;
+      color: var(--physics-blue);
+      margin-bottom: 15px;
+    }
+    .research-card h3 { font-size: 21px; margin-bottom: 14px; }
+    .research-card p { line-height: 1.7; margin-bottom: 0; }
+
+    .research-strip {
+      background: var(--physics-navy);
+      color: #fff;
+    }
+    .research-strip .stat {
+      text-align: center;
+      padding: 18px;
+    }
+    .research-strip .stat i {
+      font-size: 30px;
+      color: var(--physics-cyan);
+    }
+    .research-strip h4 { color: #fff; margin: 12px 0 5px; }
+    .research-strip p { margin: 0; color: rgba(255,255,255,.72); }
+
+    .pathway {
+      position: relative;
+      padding-top: 20px;
+    }
+    .pathway:before {
+      content: "";
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      top: 57px;
+      border-top: 2px solid #d9e3eb;
+    }
+    .path-step {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+    .path-step .number {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: var(--physics-blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+      border: 7px solid #fff;
+      box-shadow: 0 0 0 2px #d9e3eb;
+    }
+    .path-step h4 { font-size: 18px; }
+    .path-step p { font-size: 14px; line-height: 1.6; }
+
+    .opportunity-card {
+      height: 100%;
+      background: var(--physics-light);
+      padding: 30px;
+      border-radius: 7px;
+    }
+    .opportunity-card i {
+      font-size: 34px;
+      color: var(--physics-red);
+    }
+    .opportunity-card h3 { margin: 18px 0 12px; }
+
+    .people-card {
+      background: #fff;
+      height: 100%;
+      box-shadow: 0 7px 30px rgba(0,0,0,.08);
+      border-radius: 7px;
+      overflow: hidden;
+    }
+    .people-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .people-card .info { padding: 22px; }
+    .people-card h3 { margin-bottom: 5px; font-size: 21px; }
+    .people-card .role {
+      color: var(--physics-blue);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .people-card p { line-height: 1.65; }
+
+    .project-list .project {
+      padding: 24px 0;
+      border-bottom: 1px solid #dde4ea;
+    }
+    .project-list .project:last-child { border-bottom: 0; }
+    .project h3 { font-size: 21px; }
+    .tag {
+      display: inline-block;
+      background: #e8f2f8;
+      color: var(--physics-blue);
+      border-radius: 20px;
+      padding: 5px 11px;
+      margin: 3px 4px 3px 0;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .cta {
+      background: linear-gradient(120deg, var(--physics-navy), #0a4261);
+      color: #fff;
+    }
+    .cta h2 { color: #fff; }
+    .cta p { color: rgba(255,255,255,.82); font-size: 18px; }
+
+    #acknowl { background: #eef2f5; }
+    .small-note { font-size: 13px; color: #687782; }
+
+    @media (max-width: 991px) {
+      #hero .hero-container { padding-top: 150px; }
+      .pathway:before { display: none; }
+      .path-step { margin-bottom: 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header ===== -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1 class="text-light">
+          <a href="#hero"><span>Physics at Newcastle</span></a>
+        </h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#research">Research</a></li>
+          <li><a class="nav-link scrollto" href="#people">People</a></li>
+          <li><a class="nav-link scrollto" href="#students">Students</a></li>
+          <li><a class="nav-link scrollto" href="#teaching">Teaching</a></li>
+          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <div class="hero-kicker">Physics • University of Newcastle</div>
+      <h1>From the smallest scales to the largest structures in the Universe.</h1>
+      <h2>
+        We explore the fundamental physics of matter, fields, stars and space —
+        combining observation, theory, experiment, computation and data science.
+      </h2>
+      <div class="hero-actions">
+        <a href="#research" class="hero-btn primary scrollto">Explore our research</a>
+        <a href="#students" class="hero-btn scrollto">Research with us</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ===== Introduction ===== -->
+    <section class="about">
+      <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+          <h2>Physics at Newcastle</h2>
+          <p>
+            Our researchers and students investigate fundamental questions across physics,
+            with particular strengths in astrophysics, solar and stellar physics,
+            magnetism, space environments, computation and data-driven science.
+          </p>
+          <p>
+            Research is closely connected to teaching. Students can move from undergraduate
+            projects into Honours and Higher Degree by Research, gaining experience with
+            real scientific questions, modern datasets, numerical modelling and computational
+            tools along the way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section id="research" class="section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h2>Research</h2>
+          <p>Understanding physical systems through complementary observations, models and simulations.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-sun"></i></div>
+              <h3>Solar Physics</h3>
+              <p>
+                The Sun is our nearest laboratory for understanding magnetic activity.
+                Research includes the solar interior, magnetic-field generation, active regions,
+                flux emergence, solar flares, coronal mass ejections and the solar atmosphere.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-star"></i></div>
+              <h3>Stellar Physics</h3>
+              <p>
+                Stars provide laboratories for testing how rotation, magnetism, convection
+                and evolution interact. We use observations and modelling to understand
+                stars across different stages of their lives.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-pulse"></i></div>
+              <h3>Seismology &amp; Waves</h3>
+              <p>
+                Waves carry information from otherwise inaccessible regions of stars.
+                Helioseismology and asteroseismology allow us to probe stellar interiors,
+                rotation and structure using measurable oscillations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-cloud-lightning"></i></div>
+              <h3>Space Weather</h3>
+              <p>
+                Solar activity drives a changing space environment around Earth.
+                We investigate how magnetic energy is stored, released and transported,
+                and how solar eruptions propagate through interplanetary space.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-code-alt"></i></div>
+              <h3>Computational Physics</h3>
+              <p>
+                Numerical simulations provide a way to test physical ideas that cannot be
+                isolated experimentally. We combine simulation, high-performance computing
+                and observations to investigate complex physical systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="research-card">
+              <div class="icon"><i class="bx bx-line-chart"></i></div>
+              <h3>Data &amp; Machine Learning</h3>
+              <p>
+                Modern physics produces enormous datasets. Statistical inference,
+                machine learning and data analysis help us identify patterns, quantify
+                uncertainty and extract physical information from observations and simulations.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Research connection ===== -->
+    <section class="research-strip">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 stat">
+            <i class="bx bx-show"></i>
+            <h4>Observe</h4>
+            <p>Measure the Universe and the physical world.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 stat">
+            <i class="bx bx-book-open"></i>
+            <h4>Understand</h4>
+            <p>Develop physical theories and explanations.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 stat">
+            <i class="bx bx-chip"></i>
+            <h4>Model</h4>
+            <p>Use simulations and computation to test ideas.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 stat">
+            <i class="bx bx-target-lock"></i>
+            <h4>Predict</h4>
+            <p>Turn physical understanding into useful predictions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== People ===== -->
+    <section id="people" class="team">
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h2>People</h2>
+          <p>
+            Physics at Newcastle is a community of academics, teaching staff and students.
+            Add people to the cards below as the department site develops.
+          </p>
+        </div>
+
+        <h3 class="mb-4">Academic &amp; research staff</h3>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="people-card">
+              <img src="assets/img/participants/schunker.png" alt="Hannah Schunker">
+              <div class="info">
+                <h3>Hannah Schunker</h3>
+                <div class="role">Solar &amp; stellar physics</div>
+                <p>
+                  Research spanning solar and stellar magnetism, active regions,
+                  stellar structure and the connection between observations,
+                  physical models and simulations.
+                </p>
+                <a href="https://www.newcastle.edu.au/profile/hannah-schunker" target="_blank">University profile <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate this card for additional academics -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="people-card">
+              <div class="info">
+                <div class="icon mb-3"><i class="bx bx-user-circle" style="font-size:55px;color:#0c4a6e;"></i></div>
+                <h3>Academic staff</h3>
+                <div class="role">Physics research &amp; teaching</div>
+                <p>
+                  Add the department's other academic staff here, with a photograph,
+                  research interests, University profile and relevant research links.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="people-card">
+              <div class="info">
+                <div class="icon mb-3"><i class="bx bx-group" style="font-size:55px;color:#0c4a6e;"></i></div>
+                <h3>Teaching staff</h3>
+                <div class="role">Physics education</div>
+                <p>
+                  Highlight the people who teach across the undergraduate physics
+                  program and connect students with research opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="mt-5 mb-4">Students</h3>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="opportunity-card">
+              <i class="bx bx-atom"></i>
+              <h3>Higher Degree by Research</h3>
+              <p>
+                PhD and MPhil researchers tackling substantial research questions
+                using observations, theory, simulations, computation and data analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="opportunity-card">
+              <i class="bx bx-medal"></i>
+              <h3>Honours</h3>
+              <p>
+                Honours projects provide an opportunity to take ownership of a research
+                question and develop the skills needed for a research career or further study.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="opportunity-card">
+              <i class="bx bx-code-block"></i>
+              <h3>Third-year projects</h3>
+              <p>
+                Undergraduate research projects introduce students to authentic physics
+                questions and give them experience with scientific computing and analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Student pathway ===== -->
+    <section id="students" class="section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h2>From student to researcher</h2>
+          <p>
+            Research experience can build progressively through the physics degree.
+          </p>
+        </div>
+
+        <div class="row pathway">
+          <div class="col-lg-3 col-md-6 path-step">
+            <div class="number">1</div>
+            <h4>Undergraduate</h4>
+            <p>Build foundations in physics, mathematics, computation and scientific problem solving.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 path-step">
+            <div class="number">2</div>
+            <h4>Third-year project</h4>
+            <p>Work on a focused research question and learn how scientists analyse real data.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 path-step">
+            <div class="number">3</div>
+            <h4>Honours</h4>
+            <p>Develop an independent research project with substantial scientific and computational depth.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 path-step">
+            <div class="number">4</div>
+            <h4>HDR</h4>
+            <p>Develop new knowledge through a sustained research program as a PhD or MPhil researcher.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Teaching ===== -->
+    <section id="teaching">
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h2>Teaching</h2>
+          <p>
+            Physics teaching combines fundamental concepts with practical problem solving,
+            computation, experimentation and opportunities to engage with current research.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="opportunity-card">
+              <i class="bx bx-book"></i>
+              <h3>Undergraduate physics</h3>
+              <p>
+                Students develop a broad understanding of classical and modern physics,
+                supported by mathematics, laboratory work, computation and scientific communication.
+              </p>
+              <p class="small-note">
+                Add course codes, course names and links here as the site is populated.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="opportunity-card">
+              <i class="bx bx-flask"></i>
+              <h3>Research-led teaching</h3>
+              <p>
+                Research provides examples of how physics is applied to real problems:
+                from interpreting observations of stars to modelling magnetic fields and
+                extracting information from large scientific datasets.
+              </p>
+              <p class="small-note">
+                Add links to relevant courses, laboratories and teaching resources here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h2>Research projects</h2>
+          <p>
+            Example project areas. These can become a live list of available projects
+            for third-year, Honours and HDR students.
+          </p>
+        </div>
+
+        <div class="project-list">
+
+          <div class="project">
+            <h3>Magnetic flux emergence on the Sun</h3>
+            <p>
+              How do magnetic fields rise through the solar interior and emerge at the surface?
+              What determines whether an emerging active region becomes eruptive?
+            </p>
+            <span class="tag">Solar physics</span>
+            <span class="tag">Numerical simulation</span>
+            <span class="tag">Magnetism</span>
+          </div>
+
+          <div class="project">
+            <h3>Solar active regions and eruptions</h3>
+            <p>
+              Investigate how magnetic structure, energy storage and evolution are related
+              to solar flares and other eruptive phenomena.
+            </p>
+            <span class="tag">Solar physics</span>
+            <span class="tag">Observations</span>
+            <span class="tag">Space weather</span>
+          </div>
+
+          <div class="project">
+            <h3>Rotation and magnetism in stars</h3>
+            <p>
+              Use stellar observations and models to investigate how rotation and magnetic
+              activity evolve across populations of stars.
+            </p>
+            <span class="tag">Stellar physics</span>
+            <span class="tag">Asteroseismology</span>
+            <span class="tag">Data analysis</span>
+          </div>
+
+          <div class="project">
+            <h3>Data-driven physics</h3>
+            <p>
+              Develop computational and machine-learning methods to identify patterns,
+              quantify uncertainty and extract physical information from large datasets.
+            </p>
+            <span class="tag">Machine learning</span>
+            <span class="tag">Statistics</span>
+            <span class="tag">Scientific computing</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Join us ===== -->
+    <section class="cta">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2>Interested in doing research?</h2>
+            <p>
+              Whether you are looking for a third-year project, an Honours topic or
+              an HDR opportunity, talk to a member of the Physics research community.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#contact" class="hero-btn primary scrollto">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact &amp; opportunities</h2>
+          <p>
+            This is an unofficial site intended to showcase Physics research,
+            teaching and student opportunities at the University of Newcastle.
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="info-box h-100">
+              <i class="bx bx-envelope"></i>
+              <h3>Research enquiries</h3>
+              <p>
+                Add the preferred departmental or research-group contact here.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="info-box h-100">
+              <i class="bx bx-user-plus"></i>
+              <h3>Student enquiries</h3>
+              <p>
+                Add instructions for students interested in third-year projects,
+                Honours or HDR opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="info-box h-100">
+              <i class="bx bx-map"></i>
+              <h3>Find us</h3>
+              <p>
+                University of Newcastle<br>
+                Newcastle, NSW, Australia
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Acknowledgement ===== -->
+    <section id="acknowl">
+      <div class="container">
+        <div class="section-title">
+          <h2>Acknowledgement of Country</h2>
+        </div>
+        <div class="info-box">
+          <p>
+            We acknowledge and respect the Worimi clan of the Awabakal people,
+            traditional custodians of the land, Mulubinba, on which this campus
+            of the University of Newcastle is situated.
+          </p>
+          <p>
+            We recognise that the people of this land maintain knowledge and
+            educate each other through an oral tradition practiced for generations.
+          </p>
+          <p class="mb-0"><strong>Always was. Always will be.</strong></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        Physics at Newcastle — an unofficial University of Newcastle Physics site
+      </div>
+      <div class="credits">
+        Built using the existing BootstrapMade/Squadfree framework.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bx bx-chevron-up"></i>
+  </a>
+
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    /* Add the darker navigation once the user starts scrolling. */
+    window.addEventListener("scroll", function () {
+      const header = document.getElementById("header");
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
